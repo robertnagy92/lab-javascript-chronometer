@@ -21,18 +21,18 @@ class Chronometer {
   getSeconds() {
     // ... your code goes here
     if(this.currentTime !== 0) {
-      return Math.floor(this.currentTime / 60);
+      return Math.floor(this.currentTime % 60);
     } else {
       return 0
     }
   }
   twoDigitsNumber() {
     // ... your code goes here
-    if (number < 10) {
-			return "0" + number;
-		} else {
-			return `${number}`;
-		}
+    if (this.currentTime < 10) {
+      return `0${this.currentTime}`;
+    } else {
+    return this.currentTime;
+    }
   }
   stopClick() {
     // ... your code goes here
